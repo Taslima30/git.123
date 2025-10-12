@@ -5,15 +5,15 @@ files:
     destination: /home/ec2-user/my-python-app
     overwrite: true
 hooks: null
-BeforeInstall:
-  - location: scripts/cleanup.sh
-    timeout: 60
-    runas: root
-ApplicationStart:
-  - location: scripts/start_app.sh
-    timeout: 300
-    runas: root
-ApplicationStop:
-  - location: scripts/stop_app.sh
-    timeout: 60
-    runas: root
+  BeforeInstall:
+    - location: scripts/cleanup.sh
+      timeout: 60
+      runas: root
+  ApplicationStart:
+    - location: scripts/start_app.sh
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: scripts/stop_app.sh
+      timeout: 60
+      runas: root
