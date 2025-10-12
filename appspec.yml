@@ -1,10 +1,12 @@
 version: 0
 os: linux
+
 files:
   - source: /
     destination: /home/ec2-user/my-python-app
     overwrite: true
-hooks: null
+    
+hooks:
   BeforeInstall:
     - location: scripts/cleanup.sh
       timeout: 60
